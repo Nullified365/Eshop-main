@@ -1,0 +1,24 @@
+# Input from user
+distance_meters = float(input("Input distance in meters: "))
+hours = int(input("Input hour: "))
+minutes = int(input("Input minutes: "))
+seconds = int(input("Input seconds: "))
+
+# Convert total time to seconds
+total_seconds = (hours * 3600) + (minutes * 60) + seconds
+
+# Calculate speed in meters/second
+speed_meters_per_second = distance_meters / total_seconds
+
+# Convert distance to kilometers and calculate speed in km/h
+distance_kilometers = distance_meters / 1000
+speed_km_per_hour = (distance_kilometers / total_seconds) * 3600
+
+# Convert distance to miles and calculate speed in miles/h
+distance_miles = distance_meters / 1609.34  # 1 mile = 1609.34 meters
+speed_miles_per_hour = (distance_miles / total_seconds) * 3600
+
+# Output results
+print(f"Speed in meters/second: {speed_meters_per_second:.2f}")
+print(f"Speed in kilometers/hour: {speed_km_per_hour:.2f}")
+print(f"Speed in miles/hour: {speed_miles_per_hour:.2f}")

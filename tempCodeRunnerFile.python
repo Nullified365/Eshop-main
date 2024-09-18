@@ -1,0 +1,16 @@
+# Constants
+BOTTLE_SIZE_LITRES = 0.5  # 500 millilitres = 0.5 litres
+
+# Input: number of litres of water available
+total_water_litres = float(input("Enter the number of litres of water available: "))
+
+# Calculate the number of bottles that can be filled
+number_of_bottles = int(total_water_litres // BOTTLE_SIZE_LITRES)
+
+# Calculate the amount of water left
+water_left_litres = total_water_litres % BOTTLE_SIZE_LITRES
+
+# Output the results
+print("\n--- Bottling Report ---")
+print(f"Number of bottles that can be filled: {number_of_bottles}")
+print(f"Amount of water left: {water_left_litres:.2f} litres")
